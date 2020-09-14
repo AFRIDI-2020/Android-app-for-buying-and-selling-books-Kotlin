@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:text="গ্রন্থকুটির"
+                android:textSize="36sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="16sp"
+                android:text="বই ক্রায়-বিক্রয় ও আদান-প্রাদানের সহজ মাধ্যম"
+                android:textColor="@color/green"
+                android:layout_marginBottom="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="মোবাইল নম্বর"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/error_appearance"
+                android:textColorHint="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobileNoTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:inputType="phone"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="পাসওয়ার্ড"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/error_appearance"
+                android:textColorHint="@color/green"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleDrawable="@drawable/password_visibility_selector"
+                app:passwordToggleTint="@color/green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:inputType="textPassword"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <Button
+                android:id="@+id/logInBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="লগইন করুন"
+                android:textStyle="bold"
+                android:background="@drawable/item_press_color"
+                />
+
+            <TextView
+                android:id="@+id/forgetPasswordTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="পাসওয়ার্ড ভুলে গিয়েছেন?"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/green"/>
+
+
+            <TextView
+                android:id="@+id/doRegisterTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="রেজিস্টার করুন"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:id="@+id/termsAndConditionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="গ্রন্থকুটিরের নিয়ম ও শর্তাবলী"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/green"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
