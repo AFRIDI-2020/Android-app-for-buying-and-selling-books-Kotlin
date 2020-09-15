@@ -1,5 +1,6 @@
 package com.example.gronthokutir
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -33,6 +34,11 @@ class MainActivity : AppCompatActivity() {
                 passwordTIL.error = null
                 Toast.makeText(this, "ঠিকাছে", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        doRegisterTV.setOnClickListener {
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
         }
 
     }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732645557091",
+    "firebase_url": "https://gronthokutir-am97.firebaseio.com",
+    "project_id": "gronthokutir-am97",
+    "storage_bucket": "gronthokutir-am97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732645557091:android:63e01d637822031e894956",
+        "android_client_info": {
+          "package_name": "com.example.gronthokutir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732645557091-u4ed8dpbevm55lpaqpvksvq4r5818t8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gronthokutir",
+            "certificate_hash": "be2865d95392564d501bdea37d563766594cc5ef"
+          }
+        },
+        {
+          "client_id": "732645557091-bk793fedq7bp7jvk9rhb1sktu0vs8dtb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTkasjP7zyXvc71AHJZmjfh8Wb1UYfGUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732645557091-bk793fedq7bp7jvk9rhb1sktu0vs8dtb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

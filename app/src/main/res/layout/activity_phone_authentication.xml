@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhoneAuthentication">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_theme_color"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="গ্রন্থকুটির"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/containerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বই ক্রয়-বিক্রয়ের সহজ মাধ্যম"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
+                    android:id="@+id/linearDotLoader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:loader_animDur="300"
+                    android:layout_alignParentRight="true"
+                    app:loader_noOfDots="5"
+                    app:loader_circleRadius="4dp"
+                    app:loader_defaultColor="@color/darkGreen"
+                    app:loader_selectedColor="@color/white"
+                    app:loader_dotsDist="4dp"
+                    android:visibility="invisible"
+                    app:loader_expandOnSelect="false"
+                    app:loader_isSingleDir="true"
+                    app:loader_selectedRadius="2dp"
+                    app:loader_showRunningShadow="true"
+                    app:loader_firstShadowColor="@color/darkGreen"
+                    app:loader_secondShadowColor="@color/darkGreen"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="গ্রন্থকুটিরে আপনাকে স্বাগতম। আপনার মোবাইলে ম্যাসেজে পাঠানো ভ্যারিফিকেশন কোডটি নিচে বসিয়ে আপনার রেজিস্ট্রেশন নিশ্চিত করুন। "
+        android:textColor="@color/darkGreen"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:hint=""
+        android:textColorHint="@color/green"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameTIET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:inputType="text"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:text="ভ্যারিফিকেশন কোড"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="রেজিস্ট্রেশন নিশ্চিত করুন"
+        android:textStyle="bold"
+        android:background="@drawable/item_press_color"
+        />
+
+</LinearLayout>
