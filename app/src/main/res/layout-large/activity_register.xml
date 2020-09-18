@@ -26,15 +26,51 @@
             android:textSize="50sp"
             android:textStyle="bold" />
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/containerLL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="40dp"
-            android:text="বই ক্রয়-বিক্রয়ের সহজ মাধ্যম"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বই ক্রয়-বিক্রয়ের সহজ মাধ্যম"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
+                    android:id="@+id/linearDotLoader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:loader_animDur="300"
+                    android:layout_alignParentRight="true"
+                    app:loader_noOfDots="5"
+                    app:loader_circleRadius="8dp"
+                    app:loader_defaultColor="@color/darkGreen"
+                    app:loader_selectedColor="@color/white"
+                    app:loader_dotsDist="4dp"
+                    android:visibility="invisible"
+                    app:loader_expandOnSelect="false"
+                    app:loader_isSingleDir="true"
+                    app:loader_selectedRadius="2dp"
+                    app:loader_showRunningShadow="true"
+                    app:loader_firstShadowColor="@color/darkGreen"
+                    app:loader_secondShadowColor="@color/darkGreen"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -18,11 +18,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:text="গ্রন্থকুটির"
             android:textColor="@color/white"
-            android:textSize="36sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="বই ক্রয়-বিক্রয়ের সহজ মাধ্যম"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="30sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                     app:loader_animDur="300"
                     android:layout_alignParentRight="true"
                     app:loader_noOfDots="5"
-                    app:loader_circleRadius="4dp"
+                    app:loader_circleRadius="8dp"
                     app:loader_defaultColor="@color/darkGreen"
                     app:loader_selectedColor="@color/white"
                     app:loader_dotsDist="4dp"
@@ -71,6 +71,7 @@
 
         </LinearLayout>
 
+
     </LinearLayout>
 
     <TextView
@@ -79,23 +80,13 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="গরেজিস্ট্রেশনের প্রয়োজনীয় তথ্য প্রদানের জন্য আপনাকে ধন্যবাদ।"
+        android:text="গ্রন্থকুটিরে আপনাকে স্বাগতম। আপনার মোবাইলে ম্যাসেজে পাঠানো ভ্যারিফিকেশন কোডটি নিচে বসিয়ে আপনার রেজিস্ট্রেশন নিশ্চিত করুন। "
         android:textColor="@color/darkGreen"
-        android:textSize="16sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:text="একটি ভ্যারিফিকেশন ম্যাসেজ আপনার মোবাইলে পাঠানো হচ্ছে। ম্যাসেজে প্রাপ্ত কোডটি নিচে বসিয়ে আপনার রেজিস্ট্রেশন নিশ্চিত করুন।"
-        android:textColor="@color/darkGreen"
-        android:textSize="16sp" />
-
+        android:textSize="30sp" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/verificationCodeTIL"
+        android:id="@+id/usernameTIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -107,14 +98,14 @@
         app:errorTextAppearance="@style/error_appearance">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/verificationCodeTIET"
+            android:id="@+id/usernameTIET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/green"
-            android:inputType="number"
+            android:inputType="text"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="30sp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -123,20 +114,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/green"
         android:text="ভ্যারিফিকেশন কোড"
         android:layout_gravity="center_horizontal"/>
 
     <Button
-        android:id="@+id/confirmRegisterBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textSize="16sp"
+        android:textSize="30sp"
         android:textColor="@color/white"
         android:text="রেজিস্ট্রেশন নিশ্চিত করুন"
         android:textStyle="bold"

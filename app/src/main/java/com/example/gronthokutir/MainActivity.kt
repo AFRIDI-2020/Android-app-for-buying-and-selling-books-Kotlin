@@ -12,12 +12,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val mobileNoTIET: TextInputEditText = findViewById(R.id.mobileNoTIET)
-        val mobileNoTIL: TextInputLayout = findViewById(R.id.mobileNoTIL)
         val passwordTIL: TextInputLayout = findViewById(R.id.passwordTIL)
         val passwordTIET: TextInputEditText = findViewById(R.id.passwordTIET)
         val logInBtn: Button = findViewById(R.id.logInBtn);
