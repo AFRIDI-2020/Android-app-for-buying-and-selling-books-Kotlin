@@ -1,7 +1,6 @@
-package com.example.gronthokutir
+package com.example.gronthokutir.activity
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -10,23 +9,20 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable
-import com.google.android.gms.tasks.Task
+import com.example.gronthokutir.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.FirebaseException
-import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.concurrent.TimeUnit
 
@@ -38,6 +34,8 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var password: String
     lateinit var confirmPassword: String
     lateinit var firebaseAuth: FirebaseAuth
+    lateinit var databaseRef: DatabaseReference
+    var isRegistered : Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,9 +55,12 @@ class RegisterActivity : AppCompatActivity() {
 
         val containerLL: LinearLayout = findViewById(R.id.containerLL)
         firebaseAuth = FirebaseAuth.getInstance()
+        databaseRef = FirebaseDatabase.getInstance().reference
 
         var loader = LinearDotsLoader(this)
-        loader.defaultColor = ContextCompat.getColor(this, R.color.darkGreen)
+        loader.defaultColor = ContextCompat.getColor(this,
+            R.color.darkGreen
+        )
         loader.selectedColor = ContextCompat.getColor(this, R.color.white)
         loader.isSingleDir = true
         loader.noOfDots = 5
@@ -68,8 +69,12 @@ class RegisterActivity : AppCompatActivity() {
         loader.radius = 4
         loader.dotsDistance = 4
         loader.animDur = 300
-        loader.firstShadowColor = ContextCompat.getColor(this, R.color.darkGreen)
-        loader.secondShadowColor = ContextCompat.getColor(this, R.color.darkGreen)
+        loader.firstShadowColor = ContextCompat.getColor(this,
+            R.color.darkGreen
+        )
+        loader.secondShadowColor = ContextCompat.getColor(this,
+            R.color.darkGreen
+        )
         loader.showRunningShadow = true
         containerLL.addView(loader)
 
@@ -91,7 +96,26 @@ class RegisterActivity : AppCompatActivity() {
                     password = passwordTIET.text.toString()
                     confirmPassword = passwordTIET.text.toString()
 
-                    sendOTP()
+                    databaseRef.child("registeredUsers").child(phoneNo)
+                        .addValueEventListener(object : ValueEventListener {
+                            override fun onCancelled(error: DatabaseError) {
+
+                            }
+
+                            override fun onDataChange(snapshot: DataSnapshot) {
+                                if(!snapshot.exists()){
+                                    isRegistered = false
+                                    sendOTP()
+                                }
+                                if(isRegistered){
+                                    Toast.makeText(this@RegisterActivity,"মোবাইল নম্বরটি আগে থেকেই রেজিস্টার করা আছে",Toast.LENGTH_LONG).show()
+                                    linearDotsLoader.visibility = View.INVISIBLE
+                                }
+                            }
+
+                        })
+
+
                 }
 
             }
@@ -139,6 +163,9 @@ class RegisterActivity : AppCompatActivity() {
                 val verificationId: String = verification
                 val intent: Intent = Intent(this@RegisterActivity, PhoneAuthentication::class.java)
                 intent.putExtra("verificationId", verificationId)
+                intent.putExtra("username", username)
+                intent.putExtra("phoneNo", phoneNo)
+                intent.putExtra("password", password)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
 

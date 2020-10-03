@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PhoneAuthentication">
+    tools:context=".activity.PhoneAuthentication">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="গরেজিস্ট্রেশনের প্রয়োজনীয় তথ্য প্রদানের জন্য আপনাকে ধন্যবাদ।"
+        android:text="রেজিস্ট্রেশনের প্রয়োজনীয় তথ্য প্রদানের জন্য আপনাকে ধন্যবাদ।"
         android:textColor="@color/darkGreen"
         android:textSize="16sp" />
     <TextView
@@ -89,6 +89,16 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:text="একটি ভ্যারিফিকেশন ম্যাসেজ আপনার মোবাইলে পাঠানো হচ্ছে। ম্যাসেজে প্রাপ্ত কোডটি নিচে বসিয়ে আপনার রেজিস্ট্রেশন নিশ্চিত করুন।"
+        android:textColor="@color/darkGreen"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="ম্যাসেজের জন্য অপেক্ষা করুন..."
         android:textColor="@color/darkGreen"
         android:textSize="16sp" />
 

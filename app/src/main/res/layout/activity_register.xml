@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".activity.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,30 +43,30 @@
                 android:textSize="16sp" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
+                android:id="@+id/linearDotLoader"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical">
+                app:loader_animDur="300"
+                android:layout_alignParentRight="true"
+                app:loader_noOfDots="5"
+                app:loader_circleRadius="4dp"
+                app:loader_defaultColor="@color/darkGreen"
+                app:loader_selectedColor="@color/white"
+                app:loader_dotsDist="4dp"
+                android:visibility="invisible"
+                app:loader_expandOnSelect="false"
+                app:loader_isSingleDir="true"
+                app:loader_selectedRadius="2dp"
+                app:loader_showRunningShadow="true"
+                app:loader_firstShadowColor="@color/darkGreen"
+                app:loader_secondShadowColor="@color/darkGreen"/>
 
-                <com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
-                    android:id="@+id/linearDotLoader"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:loader_animDur="300"
-                    android:layout_alignParentRight="true"
-                    app:loader_noOfDots="5"
-                    app:loader_circleRadius="4dp"
-                    app:loader_defaultColor="@color/darkGreen"
-                    app:loader_selectedColor="@color/white"
-                    app:loader_dotsDist="4dp"
-                    android:visibility="invisible"
-                    app:loader_expandOnSelect="false"
-                    app:loader_isSingleDir="true"
-                    app:loader_selectedRadius="2dp"
-                    app:loader_showRunningShadow="true"
-                    app:loader_firstShadowColor="@color/darkGreen"
-                    app:loader_secondShadowColor="@color/darkGreen"/>
-
-            </RelativeLayout>
+        </RelativeLayout>
 
 
 
