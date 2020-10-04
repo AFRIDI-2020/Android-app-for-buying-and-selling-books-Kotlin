@@ -86,6 +86,11 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        if(item.itemId == R.id.profile){
+            val intent = Intent(this@HomeActivity,Profile::class.java);
+            startActivity(intent)
+        }
+
         return true
     }
 
